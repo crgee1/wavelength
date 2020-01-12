@@ -4,27 +4,17 @@ import Scale from '../scale/scale';
 import Spectrum from '../spectrum/spectrum';
 import Score from '../score/scoreboard';
 import Modal from '../modal/modal';
+import AllSpectrums from '../spectrum/all_spectrum';
 
 export default function Game() {
-    let allSpectrums =
-        [
-            { left: 'Sad Song', right: 'Happy Song' },
-            { left: 'Rough', right: 'Smooth' },
-            { left: 'Slow', right: 'Fast' },
-            { left: 'Least Useful Technology', right: 'Most Useful Technology' },
-            { left: 'Ugly Man', right: 'Handsome Man' },
-            { left: 'Fragile', right: 'Indestructible' },
-            { left: 'Small', right: 'Big' }
-        ];
-
     const [markerValue, setMarkerValue] = useState(50);
     const [hide, setHide] = useState(false);
     const [targetValue, setTargetValue] = useState(50);
     const [pointsA, setPointsA] = useState(0);
-    const [pointsB, setPointsB] = useState(0);
+    const [pointsB, setPointsB] = useState(1);
     const [teamATurn, setTeamATurn] = useState(true);
     const [spectrum, setSpectrum] = useState({ left: '', right: '' });
-    const [spectrums, setSpectrums] = useState(allSpectrums);
+    const [spectrums, setSpectrums] = useState(AllSpectrums);
     const [psychic, setPsychic] = useState(false);
     const [modal, setModal] = useState();
 
