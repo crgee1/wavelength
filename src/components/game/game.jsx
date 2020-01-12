@@ -3,6 +3,7 @@ import './game.css'
 import Scale from '../scale/scale';
 import Spectrum from '../spectrum/spectrum';
 import Score from '../score/scoreboard';
+import Modal from '../modal/modal';
 
 export default function Game() {
     let allSpectrums =
@@ -25,6 +26,7 @@ export default function Game() {
     const [spectrum, setSpectrum] = useState({ left: '', right: '' });
     const [spectrums, setSpectrums] = useState(allSpectrums);
     const [psychic, setPsychic] = useState(false);
+    const [modal, setModal] = useState();
 
     const randomCard = () => {
         const idx = Math.floor(Math.random() * spectrums.length);
@@ -41,6 +43,10 @@ export default function Game() {
     }
 
     const shuffle = () => {
+        if (!spectrums.length) {
+            setModal('end');
+            return;
+        };
         randomValue();
         randomCard();
         setPsychic(true);
@@ -72,6 +78,11 @@ export default function Game() {
 
     return (
         <div className="game">
+            <Modal
+                modal={modal}
+                pointsA={pointsA}
+                pointsB={pointsB} 
+            />
             <Score
                 pointsA={pointsA}
                 pointsB={pointsB}
@@ -86,12 +97,12 @@ export default function Game() {
             />
             <div className="button-container">
                 {psychic ? null : <button onClick={shuffle}>Be Psychic</button>}
-                {psychic && !hide ? <button onClick={() => {setHide(true)}}>Hide</button> : null}
+                {psychic && !hide ? <button onClick={() => {setHide(true)}}>Hide Target</button> : null}
                 {hide ? <button onClick={getPoints}>Submit Guess</button> : null}
             </div>
             <Spectrum
                 spectrum={spectrum}
             />
         </div>
-    )
+    );
 }
