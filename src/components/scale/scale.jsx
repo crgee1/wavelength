@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./scale.css";
 
 export default function Scale(props) {
 
-    const { hide, targetValue, markerValue, setMarkerValue } = props;
+    const { hide, targetValue, markerValue, setMarkerValue, guess } = props;
 
     const displayMarker = () => {
-        
         let style = {left: `${markerValue-.1}%`};
+        
         return (
             <div style={style} className="marker">
                 
@@ -41,6 +41,8 @@ export default function Scale(props) {
     }
 
     const handleClick = (e) => {
+        if (guess) return;
+        
         const windowWidth = document.getElementById('scale').clientWidth;
         const clickPos = e.clientX - window.innerWidth * .01;
         

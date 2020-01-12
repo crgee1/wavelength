@@ -17,6 +17,8 @@ export default function Game() {
     const [spectrums, setSpectrums] = useState(AllSpectrums);
     const [psychic, setPsychic] = useState(false);
     const [modal, setModal] = useState();
+    const [guess, setGuess] = useState(false);
+    const [left, setLeft] = useState(null);
 
     const randomCard = () => {
         const idx = Math.floor(Math.random() * spectrums.length);
@@ -43,27 +45,49 @@ export default function Game() {
     }
 
     const givePoints = (points) => {
-        (teamATurn) ? setPointsA(pointsA + points) : setPointsB(pointsB + points);
+        teamATurn ? setPointsA(pointsA + points) : setPointsB(pointsB + points);
     }
 
     const nextTurn = () => {
         setTeamATurn(!teamATurn);
         setHide(false);
         setPsychic(false);
+        setGuess(false);
+        setLeft(null);
+    }
+
+    const bonusPoint = () => {
+        teamATurn ? setPointsB(pointsB + 1) : setPointsA(pointsA + 1);
     }
 
     const getPoints = () => {
         if (markerValue >= targetValue - 1.75 && markerValue <= targetValue + 1.75) {
             givePoints(4);
         }
-        else if (markerValue >= targetValue - 6 && markerValue <= targetValue + 6) {
-            givePoints(3);
-        }
-        else if (markerValue >= targetValue - 10 && markerValue <= targetValue + 10) {
-            givePoints(2);
-        }
+        else {bonusPoint();
+            if (markerValue >= targetValue - 6 && !left) bonusPoint();
+            if (markerValue <= targetValue + 6 && left) bonusPoint();
+
+            if (markerValue >= targetValue - 6 && markerValue <= targetValue + 6) {
+                givePoints(3);
+            }
+            else if (markerValue >= targetValue - 10 && markerValue <= targetValue + 10) {
+                givePoints(2);
+            }
+        } 
 
         nextTurn();
+    }
+
+    const displayLeftRight = () => {
+        if (!guess || left !== null) return null;
+
+        return (
+            <div className="button-container">
+                <button onClick={() => setLeft(true)}>Left</button>
+                <button onClick={() => setLeft(false)}>Right</button>
+            </div>
+        )
     }
 
     return (
@@ -84,11 +108,14 @@ export default function Game() {
                 targetValue={targetValue}
                 markerValue={markerValue}
                 setMarkerValue={setMarkerValue}
+                guess={guess}
             />
             <div className="button-container">
                 {psychic ? null : <button onClick={shuffle}>Be Psychic</button>}
                 {psychic && !hide ? <button onClick={() => {setHide(true)}}>Hide Target</button> : null}
-                {hide ? <button onClick={getPoints}>Submit Guess</button> : null}
+                {hide && !guess ? <button onClick={() => {setGuess(true)}}>Lock In</button> : null}
+                {displayLeftRight()}
+                {guess && left !== null ? <button onClick={getPoints}>Score Points</button> : null}
             </div>
             <Spectrum
                 spectrum={spectrum}

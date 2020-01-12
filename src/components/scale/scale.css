@@ -26,6 +26,7 @@
     justify-content: space-between;
     top: 0;
     z-index: 2;
+    transition: ease .5s;
 }
 
 .points {
