@@ -1,0 +1,31 @@
+.spectrum-container {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+
+.spectrum {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.half {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.right {
+    background-color: orange;
+}
+
+.spectrum-container .fas {
+    margin-top: -4%;
+    position: absolute;
+    font-size: 3em;
+}

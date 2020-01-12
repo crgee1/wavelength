@@ -1,0 +1,14 @@
+.scoreboard-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.team-score {
+    text-align: center;
+    width: 50%;
+}
+
+.turn {
+    background-color: orange;
+}

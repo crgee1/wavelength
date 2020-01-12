@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./scale.css";
 
 export default function Scale(props) {
+
     const { hide, targetValue, markerValue, setMarkerValue } = props;
 
     const displayMarker = () => {
