@@ -1,0 +1,12 @@
+.game {
+    align-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: auto 0;
+}

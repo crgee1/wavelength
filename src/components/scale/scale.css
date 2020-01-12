@@ -1,0 +1,98 @@
+.scale-container {
+    background-color: antiquewhite;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.marker {
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    background-color: crimson;
+    z-index: 3;
+}
+
+.target {
+    margin-left: 1%;
+    position: absolute;
+    width: 20%;
+    height: 82px;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    z-index: 2;
+}
+
+.points {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.four {
+    background-color: cornflowerblue;
+}
+
+.three {
+    background-color: orange;
+}
+
+.two {
+    background-color: lightcoral;
+}
+
+.scale {
+    position: absolute;
+    height: 82px;
+    width: 98%;
+    background-color: white;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.indents {
+    float: left;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.indent {
+    width: 1.5px;
+    background-color: black;
+}
+
+.short {
+    height: 15%;
+}
+
+.mid {
+    height: 25%;
+}
+
+.long {
+    height: 50%;
+}
+
+.midpoint {
+    margin-top: 141px;
+    color: red;
+}
+
+.controller {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controller .far {
+    font-size: 2.5em;
+}
