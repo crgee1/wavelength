@@ -1,12 +1,12 @@
 .spectrum-container {
     display: flex;
     flex-direction: column;
-    height: 30%;
+    height: 28%;
 }
 
 .spectrum {
     display: flex;
-    height: 80%;
+    height: 100%;
     width: 100%;
     box-sizing: border-box;
     border: 1px solid black;
