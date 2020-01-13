@@ -12,6 +12,7 @@ export default [
     { left: 'Bad Movie', right: 'Good Movie' },
     { left: 'Fragile', right: 'Indestructible' },
     { left: 'Low Quality', right: 'High Quality' },
+    { left: 'Cold', right: 'Hot' },
     { left: 'Round', right: 'Pointy' },
     { left: 'Inflexible', right: 'Flexible' },
     { left: 'Unhygienic', right: 'Hygienic' },

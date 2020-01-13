@@ -41,8 +41,8 @@ export default function Scale(props) {
     }
 
     const handleClick = (e) => {
-        if (guess) return;
-        
+        if (!hide || guess) return;
+
         const windowWidth = document.getElementById('scale').clientWidth;
         const clickPos = e.clientX - window.innerWidth * .01;
         
@@ -51,6 +51,8 @@ export default function Scale(props) {
 
     const adjustMarker = (right) => {
         return () => {
+            if (!hide || guess) return;
+
             if (right && markerValue < 100) {
                 setMarkerValue(markerValue + .25);
             } else if (!right && markerValue > 0) {

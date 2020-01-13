@@ -64,9 +64,9 @@ export default function Game() {
         if (markerValue >= targetValue - 1.75 && markerValue <= targetValue + 1.75) {
             givePoints(4);
         }
-        else {bonusPoint();
-            if (markerValue >= targetValue - 6 && !left) bonusPoint();
-            if (markerValue <= targetValue + 6 && left) bonusPoint();
+        else {
+            if (markerValue >= targetValue - 6 && left) bonusPoint();
+            if (markerValue <= targetValue + 6 && !left) bonusPoint();
 
             if (markerValue >= targetValue - 6 && markerValue <= targetValue + 6) {
                 givePoints(3);
@@ -104,6 +104,7 @@ export default function Game() {
             />
             <Scale 
                 hide={hide}
+                psychic={psychic}
                 setHide={setHide}
                 targetValue={targetValue}
                 markerValue={markerValue}
