@@ -20,6 +20,10 @@
     width: 50%;
 }
 
+.left {
+    background-color: white;
+}
+
 .right {
     background-color: orange;
 }

@@ -83,7 +83,7 @@ export default function Game() {
         if (!guess || left !== null) return null;
 
         return (
-            <div className="button-container">
+            <div>
                 <button onClick={() => setLeft(true)}>Left</button>
                 <button onClick={() => setLeft(false)}>Right</button>
             </div>
@@ -112,11 +112,13 @@ export default function Game() {
                 guess={guess}
             />
             <div className="button-container">
-                {psychic ? null : <button onClick={shuffle}>Be Psychic</button>}
-                {psychic && !hide ? <button onClick={() => {setHide(true)}}>Hide Target</button> : null}
-                {hide && !guess ? <button onClick={() => {setGuess(true)}}>Lock In</button> : null}
-                {displayLeftRight()}
-                {guess && left !== null ? <button onClick={getPoints}>Score Points</button> : null}
+                <div className="buttons">
+                    {psychic ? null : <button onClick={shuffle}>Be Psychic</button>}
+                    {psychic && !hide ? <button onClick={() => {setHide(true)}}>Hide Target</button> : null}
+                    {hide && !guess ? <button onClick={() => {setGuess(true)}}>Lock In</button> : null}
+                    {displayLeftRight()}
+                    {guess && left !== null ? <button onClick={getPoints}>Score Points</button> : null}
+                </div>
             </div>
             <Spectrum
                 spectrum={spectrum}

@@ -1,9 +1,8 @@
 .scale-container {
     background-color: antiquewhite;
-    height: 200px;
+    height: 180px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     position: relative;
     z-index: 2;
@@ -23,7 +22,6 @@
     width: 20%;
     height: 82px;
     display: flex;
-    justify-content: space-between;
     top: 0;
     z-index: 2;
     transition: ease .5s;
@@ -38,18 +36,19 @@
 }
 
 .four {
-    background-color: cornflowerblue;
+    background-color: orangered;
 }
 
 .three {
-    background-color: orange;
+    background-color: coral;
 }
 
 .two {
-    background-color: lightcoral;
+    background-color: cornflowerblue;
 }
 
 .scale {
+    margin-top: 24px;
     position: absolute;
     height: 82px;
     width: 98%;
@@ -84,16 +83,18 @@
 }
 
 .midpoint {
-    margin-top: 141px;
+    margin-top: 112px;
     color: red;
 }
 
 .controller {
     width: 17%;
+    min-width: 135px;
     display: flex;
     justify-content: space-between;
 }
 
 .controller .far {
+    cursor: pointer;
     font-size: 2.5em;
 }
