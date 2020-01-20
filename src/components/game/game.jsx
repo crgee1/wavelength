@@ -65,8 +65,9 @@ export default function Game() {
             givePoints(4);
         }
         else {
-            if (markerValue >= targetValue - 6 && left) bonusPoint();
-            if (markerValue <= targetValue + 6 && !left) bonusPoint();
+            console.log(markerValue, targetValue);
+            if (markerValue > targetValue + 1.75 && left) bonusPoint();
+            if (markerValue < targetValue - 1.75 && !left) bonusPoint();
 
             if (markerValue >= targetValue - 6 && markerValue <= targetValue + 6) {
                 givePoints(3);
