@@ -19,9 +19,16 @@ export default [
     { left: 'Taste Bad', right: 'Taste Good' },
     { left: 'Sick', right: 'Healthy' },
     { left: 'Skinny', right: 'Fat' },
+    { left: 'Selfish', right: 'Giving' },
     { left: 'Uncool', right: 'Cool' },
     { left: 'Quiet', right: 'Loud' },
     { left: 'Wet', right: 'Dry' },
+    { left: 'Close', right: 'Far' },
+    { left: 'Boring', right: 'Exciting' },
+    { left: 'Hate', right: 'Love' },
+    { left: 'Illegal', right: 'Legal' },
+    { left: 'Humorless', right: 'Hilarious' },
+    { left: 'Little Brain', right: 'Big Brain' },
     { left: 'Villain', right: 'Hero' },
     { left: 'Cold', right: 'Hot' },
     { left: 'Dangerous', right: 'Safe' },
@@ -29,5 +36,6 @@ export default [
     { left: 'Useless Body Part', right: 'Useful Body Part' },
     { left: 'Light', right: 'Heavy' },
     { left: 'Boring', right: 'Exciting' },
+    { left: 'Hairless', right: 'Hairy' },
     { left: 'Small', right: 'Big' }
 ];
