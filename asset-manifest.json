@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/wavelength/static/css/main.3f531fa9.chunk.css",
-    "main.js": "/wavelength/static/js/main.81565c77.chunk.js",
-    "main.js.map": "/wavelength/static/js/main.81565c77.chunk.js.map",
+    "main.js": "/wavelength/static/js/main.a6cf806b.chunk.js",
+    "main.js.map": "/wavelength/static/js/main.a6cf806b.chunk.js.map",
     "runtime-main.js": "/wavelength/static/js/runtime-main.4895818e.js",
     "runtime-main.js.map": "/wavelength/static/js/runtime-main.4895818e.js.map",
     "static/js/2.ea1c842d.chunk.js": "/wavelength/static/js/2.ea1c842d.chunk.js",
     "static/js/2.ea1c842d.chunk.js.map": "/wavelength/static/js/2.ea1c842d.chunk.js.map",
     "index.html": "/wavelength/index.html",
-    "precache-manifest.18ad4a559b60a86896ae90376ff9c88a.js": "/wavelength/precache-manifest.18ad4a559b60a86896ae90376ff9c88a.js",
+    "precache-manifest.5e9b228c8f81ec0e3c103ba9e9beadf1.js": "/wavelength/precache-manifest.5e9b228c8f81ec0e3c103ba9e9beadf1.js",
     "service-worker.js": "/wavelength/service-worker.js",
     "static/css/main.3f531fa9.chunk.css.map": "/wavelength/static/css/main.3f531fa9.chunk.css.map",
     "static/js/2.ea1c842d.chunk.js.LICENSE": "/wavelength/static/js/2.ea1c842d.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4895818e.js",
     "static/js/2.ea1c842d.chunk.js",
     "static/css/main.3f531fa9.chunk.css",
-    "static/js/main.81565c77.chunk.js"
+    "static/js/main.a6cf806b.chunk.js"
   ]
 }
