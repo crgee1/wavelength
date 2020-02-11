@@ -111,6 +111,9 @@ export default function Game() {
                 setMarkerValue={setMarkerValue}
                 guess={guess}
             />
+            <Spectrum
+                spectrum={spectrum}
+            />
             <div className="button-container">
                 <div className="buttons">
                     {psychic ? null : <button onClick={shuffle}>Be Psychic</button>}
@@ -120,9 +123,6 @@ export default function Game() {
                     {guess && left !== null ? <button onClick={getPoints}>Score Points</button> : null}
                 </div>
             </div>
-            <Spectrum
-                spectrum={spectrum}
-            />
         </div>
     );
 }
