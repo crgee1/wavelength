@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './game.css'
 import Scale from '../scale/scale';
 import Spectrum from '../spectrum/spectrum';
@@ -19,6 +19,12 @@ export default function Game() {
     const [modal, setModal] = useState();
     const [guess, setGuess] = useState(false);
     const [left, setLeft] = useState(null);
+
+    useEffect(() => {
+        window.onbeforeunload = function () {
+            return 'You really want to go ahead?';
+        }
+    }, []);
 
     const randomCard = () => {
         const idx = Math.floor(Math.random() * spectrums.length);
