@@ -6,6 +6,7 @@
     align-items: center;
     position: relative;
     z-index: 2;
+    background-image: linear-gradient(to right, #0f6fbd, white, #0f6fbd);
 }
 
 .marker {
@@ -106,19 +107,4 @@
     position: absolute;
     height: 100%;
     width: 100%;
-}
-
-.ha {
-    align-self: start;
-    float: left;
-    height: 100%;
-    width: 50%;
-}
-
-.halfone {
-    background-image: linear-gradient(to right, #0f6fbd, white);
-}
-
-.halftwo {
-    background-image: linear-gradient(to left, #0f6fbd, white);
 }
