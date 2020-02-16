@@ -10,6 +10,7 @@
     width: 100%;
     box-sizing: border-box;
     border: 1px solid black;
+    background-image: linear-gradient(to right, white, orange);
 }
 
 .half {
@@ -20,13 +21,13 @@
     width: 50%;
 }
 
-.left {
+/* .left {
     background-color: white;
 }
 
 .right {
     background-color: orange;
-}
+} */
 
 .spectrum-container .fas {
     margin-top: -4%;

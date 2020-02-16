@@ -63,6 +63,10 @@ export default function Scale(props) {
 
     return (
         <div className="scale-container">
+            <div className="ha-container">
+                <div className="ha halfone"></div>
+                <div className="ha halftwo"></div>
+            </div>
             <div id="scale" className="scale" onClick={handleClick}>
                 <div className="indents">
                     <div className="indent long">
