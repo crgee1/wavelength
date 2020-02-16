@@ -108,6 +108,9 @@ export default function Game() {
                 pointsB={pointsB}
                 teamATurn={teamATurn}
             />
+            <Spectrum
+                spectrum={spectrum}
+            />
             <Scale 
                 hide={hide}
                 psychic={psychic}
@@ -116,9 +119,6 @@ export default function Game() {
                 markerValue={markerValue}
                 setMarkerValue={setMarkerValue}
                 guess={guess}
-            />
-            <Spectrum
-                spectrum={spectrum}
             />
             <div className="button-container">
                 <div className="buttons">
