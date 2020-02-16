@@ -11,5 +11,6 @@
 }
 
 .turn {
-    background-color: orange;
+    /* background-color: orange; */
+    background-image: linear-gradient(to right, white, orange);
 }
